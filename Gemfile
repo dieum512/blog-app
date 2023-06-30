@@ -73,3 +73,5 @@ end
 
 # Add pg gem for PostgreSQL database
 gem 'pg'
+
+gem 'rubocop', '>= 1.0', '< 2.0'

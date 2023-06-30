@@ -25,7 +25,7 @@
 
 # 📖 Blog App <a name="about-project"></a>
 
-**Blog App** is an app created using Ruby on Rails. This app was inspired by Microverse for the Ruby on Rails practice.
+**Blog App** is an app created using Ruby on Rails, it is about creating posts and users can comment on the posts and like the posts. This app was inspired by Microverse for the Ruby on Rails practice.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -49,11 +49,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **Add Books, movies, games and music albums**
-- **Show the list of books, movies, games and music albums**
-- **Archive any item that is old**
+- **Install Ruby on Rails framework**
+- **Use Ruby Gems as a software packages system.**
+- **Use database migration files to maintain database schema.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -90,7 +88,7 @@ To run the project, execute the following command:
 Example command:
 
 ```sh
-  Open terminal in the folder directory and run "ruby main.rb"
+  Open terminal in the folder directory and run "bundle install"
 ````
 
 -

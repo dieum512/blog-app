@@ -4,13 +4,13 @@ RSpec.describe Comment, type: :model do
   describe 'associations' do
     it 'belongs to a user' do
       user = User.new
-      comment = Comment.new(user:)
+      comment = Comment.new(user: user)
       expect(comment.user).to eq(user)
     end
 
     it 'belongs to a post' do
       post = Post.new
-      comment = Comment.new(post:)
+      comment = Comment.new(post: post)
       expect(comment.post).to eq(post)
     end
   end
@@ -28,7 +28,7 @@ RSpec.describe Comment, type: :model do
     post = Post.create(title: 'post', text: 'This is my post', author_id: user.id, comments_counter: 0,
                        likes_counter: 0)
 
-    subject { described_class.create(text: 'My comment', post:, user_id: user.id) }
+    subject { described_class.create(text: 'My comment', post: post, user_id: user.id) }
 
     it 'posts comments count should increase' do
       expect(subject.post.comments_counter).to eq(post.comments_counter)

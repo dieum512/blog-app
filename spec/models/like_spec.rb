@@ -20,7 +20,7 @@ RSpec.describe Like, type: :model do
     post = Post.create(title: 'post', text: 'This is my post', author_id: user.id, comments_counter: 0,
                        likes_counter: 0)
 
-    subject { described_class.create(post:, user_id: user.id) }
+    subject { described_class.create(post: post, user_id: user.id) }
 
     it 'posts comments count should increase' do
       expect(subject.post.likes_counter).to eq(post.likes_counter)

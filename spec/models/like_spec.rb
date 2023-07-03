@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe Like, type: :model do
   describe 'associations' do
     it 'belongs to user' do
-      association = described_class.reflect_on_association(:user)
+      association = described_class.reflect_on_association(:author)
       expect(association.macro).to eq(:belongs_to)
-      expect(association.options[:foreign_key]).to eq('user_id')
+      expect(association.options[:foreign_key]).to eq('author_id')
     end
 
     it 'belongs to post' do

@@ -4,6 +4,9 @@ class Comment < ApplicationRecord
   after_create :update_post_comments_counter
   after_destroy :decrement_post_comment_counter
 
+  validates :text, presence: true
+  validates :user_id, presence: true
+
   def update_post_comments_counter
     post.update(comments_count: post.comments.count)
   end

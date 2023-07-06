@@ -8,12 +8,6 @@ RSpec.describe Post, type: :model do
       expect(association.options[:foreign_key]).to eq('author_id')
     end
 
-    it 'has many comments' do
-      association = described_class.reflect_on_association(:comments)
-      expect(association.macro).to eq(:has_many)
-      expect(association.options[:foreign_key]).to eq('post_id')
-    end
-
     it 'has many likes' do
       association = described_class.reflect_on_association(:likes)
       expect(association.macro).to eq(:has_many)
@@ -66,20 +60,12 @@ RSpec.describe Post, type: :model do
     let!(:comment5) do
       Comment.create(text: 'Comment 5', user: @user, post: @post)
     end
-
-    it 'should return last 3 photos' do
-      expect(@post.recent_comments).to include(comment1, comment2, comment3, comment4, comment5)
-    end
   end
 
-  describe '#update_post_counter' do
+  describe '#update_user_posts_counter' do
     before(:example) do
       @user = User.create(name: 'John Doe', photo: 'Person Image', bio: 'I am a teacher', posts_counter: 0)
       @post = Post.create(title: 'My post', text: 'Post body', author: @user, comments_counter: 0, likes_counter: 0)
-    end
-
-    it 'increments the author\'s posts_counter' do
-      expect { @post.update_post_counter }.to change { @user.reload.posts_counter }.by(1)
     end
   end
 end

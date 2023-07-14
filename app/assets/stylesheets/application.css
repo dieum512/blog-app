@@ -1,15 +1,122 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* main page */
+
+#user-display {
+    padding: 5% 15%;
+}
+
+.image-user,
+.user-description,
+.user-container { /* for the user and the thext page */
+    border: 1px solid #000;
+    display: flex;
+    height: 200px;
+    gap: 50px;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.image-user .post-img,
+.user-description .img-div,
+.user-container .user-image-cont { /* Same here */
+    height: 100%;
+}
+
+.image-user .post,
+.user-description .user-name,
+.user-container .user-info { /* Same here */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.image-user .post h2,
+.user-description .user-name h2,
+.user-container .user-info h2 { /* Same here */
+    font-size: 50px;
+}
+
+.image-user .post p
+.user-description .user-name p,
+.user-container .user-info  p { /* Same here */
+    font-size: 20px;
+}
+
+/* Users */
+#user-details {
+    padding: 5% 15%;
+}
+
+.user-description .img-div {
+    height: 100%;
+}
+
+.bio-description { /* Bio */
+    width: 100%;
+    border: 1px solid #000;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.bio-description h3 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.bio-description p {
+    font-size: 18px;
+}
+
+.user-posts { /* posts */
+    border: 1px solid #000;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.user-posts a {
+    color: #000;
+    font-size: 25px;
+}
+
+.comment-like {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.see-posts a,
+.pagination {
+    background-color: rgb(4, 4, 46);
+    color: #fff;
+    padding: 15px;
+    font-size: 20px;
+    width: fit-content;
+}
+
+.container {
+    padding: 5% 15%;
+}
+
+.user-container .user-info a {
+    color: #000;
+}
+
+.posts {
+    border: 1px solid #000;
+    padding: 20px;
+    margin-bottom: 20px;
+}

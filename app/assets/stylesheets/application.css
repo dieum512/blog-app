@@ -1,122 +1,123 @@
+/* stylelint-disable no-descending-specificity */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* main page */
 
 #user-display {
-    padding: 5% 15%;
+  padding: 5% 15%;
 }
 
 .image-user,
 .user-description,
 .user-container { /* for the user and the thext page */
-    border: 1px solid #000;
-    display: flex;
-    height: 200px;
-    gap: 50px;
-    color: #000;
-    margin-bottom: 50px;
+  border: 1px solid #000;
+  display: flex;
+  height: 200px;
+  gap: 50px;
+  color: #000;
+  margin-bottom: 50px;
 }
 
 .image-user .post-img,
 .user-description .img-div,
 .user-container .user-image-cont { /* Same here */
-    height: 100%;
+  height: 100%;
 }
 
 .image-user .post,
 .user-description .user-name,
 .user-container .user-info { /* Same here */
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
 
 .image-user .post h2,
 .user-description .user-name h2,
 .user-container .user-info h2 { /* Same here */
-    font-size: 50px;
+  font-size: 50px;
 }
 
-.image-user .post p
+.image-user .post p,
 .user-description .user-name p,
-.user-container .user-info  p { /* Same here */
-    font-size: 20px;
+.user-container .user-info p { /* Same here */
+  font-size: 20px;
 }
 
 /* Users */
 #user-details {
-    padding: 5% 15%;
+  padding: 5% 15%;
 }
 
 .user-description .img-div {
-    height: 100%;
+  height: 100%;
 }
 
 .bio-description { /* Bio */
-    width: 100%;
-    border: 1px solid #000;
-    padding: 20px;
-    margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #000;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .bio-description h3 {
-    font-size: 35px;
-    margin-bottom: 30px;
+  font-size: 35px;
+  margin-bottom: 30px;
 }
 
 .bio-description p {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .user-posts { /* posts */
-    border: 1px solid #000;
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 15px;
-    margin-bottom: 20px;
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+  margin-bottom: 20px;
 }
 
 .user-posts a {
-    color: #000;
-    font-size: 25px;
+  color: #000;
+  font-size: 25px;
 }
 
 .comment-like {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .see-posts a,
 .pagination {
-    background-color: rgb(4, 4, 46);
-    color: #fff;
-    padding: 15px;
-    font-size: 20px;
-    width: fit-content;
+  background-color: rgb(4, 4, 46);
+  color: #fff;
+  padding: 15px;
+  font-size: 20px;
+  width: fit-content;
 }
 
 .container {
-    padding: 5% 15%;
+  padding: 5% 15%;
 }
 
 .user-container .user-info a {
-    color: #000;
+  color: #000;
 }
 
 .posts {
-    border: 1px solid #000;
-    padding: 20px;
-    margin-bottom: 20px;
+  border: 1px solid #000;
+  padding: 20px;
+  margin-bottom: 20px;
 }

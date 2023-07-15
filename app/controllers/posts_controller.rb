@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   def create
     @user = @current_user
     @post = Post.new(post_params)
-    @post.user_id = @user.id 
+    @post.user_id = @user.id
 
     if @post.save
       flash[:success] = 'Post successfully created'

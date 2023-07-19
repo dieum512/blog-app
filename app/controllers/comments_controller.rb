@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
   def create
     @user = @current_user
     @post = Post.find_by(id: params[:post_id])
-    @comment = Comment.new(user_id: @user.id, post_id: @post.id, text: params[:comment][:text])
+    @comment = Comment.includes(:author).new(user_id: @user.id, post_id: @post.id, text: params[:comment][:text])
     if @comment.save
       redirect_to user_post_path(@user, @post), notice: 'Comment was successfully created.'
     else

@@ -1,6 +1,6 @@
 <div id="user-display">
 
-  <% @users.each do |user| %>
+  <% @users.includes(:comments).each do |user| %>
     <a href="/users/<%= user.id %>" class="user-link">
       <div class="image-user">
         <div class="post-img">

@@ -8,9 +8,11 @@
     <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
   </div>
 
+  <% if flash[:resent_confirmation_instructions] %>
+    <p class="notice">Confirmation instructions have been resent. Please check your email.</p>
+  <% end %>
+
   <div class="actions">
     <%= f.submit "Resend confirmation instructions" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>

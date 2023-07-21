@@ -1,0 +1,10 @@
+<h2>Add new post</h2>
+<%= form_with model: @post, url: user_posts_path(@user) do |f| %>
+  <div class="form-container">
+  <label for="post_title">title:</label>
+    <%= f.text_field :title, required: true, autofocus: true, class: "form-input", placeholder: "Enter post the title" %>
+    <label for="post_title">text:</label>
+    <%= f.text_area :text, required: true, autofocus: true, class: "form-input", placeholder: "Enter post the body"%>
+    <%= f.submit "Create", class: "create-btn" %>
+  </div>
+<% end %>

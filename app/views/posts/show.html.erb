@@ -1,0 +1,29 @@
+<div class="container">
+
+    <div class="posts">
+
+<div class="top-info">
+      <b>Post: <%= @index %> <%=link_to @users.name, "/users" %></b>
+
+      <div class="coutner-cont-posts">
+      <h6>Comments: <%= @post.comments.count %></h6>
+      <h6>Likes: <%= @post.likes.count %></h6>
+      </div>
+</div>
+<p class="post-text">
+<%= @post.text %>
+</p>
+            <% @post.comments.each do |comment| %>
+  <p><%= comment.user.name %>: <%= comment.text %></p>
+<% end %>
+</div>
+
+<div class="comment-like-btn">
+      <%= form_with model: @like, url: user_post_likes_path(1, @post), scope: :like do |form|%>
+        <%= form.submit 'Like', class: 'btn_1' %>
+      <% end %>
+      <button type="button" class="btn_2">
+        <%= link_to "Comment", new_user_post_comment_path( post_id: @post.id), { class: "user_link" } %>
+      </button>
+    </div>
+</div>

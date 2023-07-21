@@ -1,0 +1,40 @@
+<div class="container">
+<div class="user-container">
+
+<div class="user-image-cont">
+<img src="<%= @users.photo %>" class="user-image">
+</div>
+
+<div class="user-info">
+<h2><%=link_to @users.name, "/users" %></h2>
+  <p>Number of posts: <%= @users.posts.count %></p>
+</div>
+
+</div>
+
+<% @posts.each_with_index do |post, index| %>
+    <div class="posts <%= 'hidden' if index >= 3 %>">
+      <b>Post:<%= index + 1 %> <%= @users.name %></b>
+      <p class="post-text">
+      <p class="post-text">
+<%=link_to post.text, "/users/#{params[:user_id]}/posts/#{post.id}"%>
+</p>
+
+      </p>
+      <div class="coutner-cont">
+      <h6>Comments: <%= post.comments.count %></h6>
+      <h6>Likes: <%= post.likes.count %></h6>
+      </div>
+
+            <% post.five_recent_comments.each do |comment| %>
+                <p><%= comment.user.name %>: <%= comment.text %></p>
+            <% end %>
+
+    </div>
+  <% end %>
+
+<button class="pagination">Pagination<button>
+<a href="/users/<%= @current_user.id %>/posts/new" class="btn btn-primary">New Post</a>
+</div>
+
+</div>

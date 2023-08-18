@@ -115,6 +115,12 @@ Example command:
 - Twitter: [@dieumakonkw](https://twitter.com/dieumakonkw)
 - LinkedIn: [Dieum Akonkwa](https://www.linkedin.com/in/dieum-akonkwa/)
 
+👤 **Lovi Madaan**
+
+- GitHub: [LoviMadaan](https://github.com/LoviMadaan)
+- Twitter: [@lovinarang](https://twitter.com/lovinarang)
+- LinkedIn: [LoviMadaan](https://www.linkedin.com/in/lovi-madaan)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->

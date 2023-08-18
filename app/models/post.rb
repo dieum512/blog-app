@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
-  belongs_to :author, class_name: 'User', foreign_key: 'author_id'
-  has_many :comments
+  belongs_to :author, class_name: 'User', foreign_key: 'user_id'
+  has_many :comments, class_name: 'Comment', foreign_key: 'post_id'
   has_many :likes, foreign_key: 'post_id'
 
   after_create :update_user_posts_counter
@@ -14,15 +14,15 @@ class Post < ApplicationRecord
               only_integer: true,
               greater_than_or_equal_to: 0,
               message: 'must be an integer greater than or equal to zero'
-            },
-            on: :create
+            }, allow_nil: true
+  # on: :create
   validates :comments_counter,
             numericality: {
               only_integer: true,
               greater_than_or_equal_to: 0,
               message: 'must be an integer greater than or equal to zero'
-            },
-            on: :create
+            }, allow_nil: true
+  # on: :create
 
   def five_recent_comments
     comments.includes(:user).order(created_at: :desc).limit(5)

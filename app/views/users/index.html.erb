@@ -1,0 +1,15 @@
+<div id="user-display">
+
+  <% @users.includes(:comments).each do |user| %>
+    <a href="/users/<%= user.id %>" class="user-link">
+      <div class="image-user">
+        <div class="post-img">
+        </div>
+        <div class="post">
+          <h2><%= user.name %></h2>
+          <p>Number of posts: <%= user.posts_counter %></p>
+        </div>
+      </div>
+    </a>
+  <% end %>
+</div>

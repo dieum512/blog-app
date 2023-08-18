@@ -1,0 +1,10 @@
+<%= form_with model: [@current_user, @post, Comment.new], url: user_post_comments_path(@current_user, @post), class: 'comment_form' do |form| %>
+    <div class="form-group">
+      <%= form.text_area :text, class: 'form-control comment_input', placeholder: 'Enter your comment' %>
+      <% form.object.errors.full_messages_for(:text).each do |message| %>
+        <div class="error-message"><%= message %></div>
+      <% end %>
+    </div>
+    <br>
+    <%= form.submit 'Post Comment', class: 'btn btn-primary post_button' %>
+  <% end %>
